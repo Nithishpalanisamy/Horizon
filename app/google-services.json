@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "597676998701",
+    "project_id": "horizon-job-portal",
+    "storage_bucket": "horizon-job-portal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597676998701:android:5d43daa91b5638d87478a4",
+        "android_client_info": {
+          "package_name": "com.example.horizon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnJPD1XtvUzSQwdJNIfOfYfMcFoMFpn4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
