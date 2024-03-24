@@ -37,7 +37,7 @@ class Register:MainActivity() {
 
     private fun isValidPassword(password: String): Boolean {
         // You can replace this with your own password validation logic
-        return password.length >= 8
+        return password.length >= 6
     }
     override fun back(){
         val i=Intent(this,MainActivity::class.java)

@@ -40,7 +40,7 @@ open class MainActivity : AppCompatActivity() {
 
     private fun isValidPassword(password: String): Boolean {
         // You can replace this with your own password validation logic
-        return password.length >= 8
+        return password.length >= 6
     }
     open fun back()
     {
