@@ -33,7 +33,7 @@ class Register : MainActivity() {
                 email.error = "Please enter a valid email"
             } else if (pass.isEmpty()) {
                 password.error = "Password cannot be empty"
-            } else if (isValidPassword(pass)) {
+            } else if (!isValidPassword(pass)) {
                 password.error = "Invalid password"
             } else if (pass != confirmPass) {
                 confirmpassword.error = "Passwords do not match"
@@ -41,7 +41,7 @@ class Register : MainActivity() {
                 auth.createUserWithEmailAndPassword(user, pass).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Signup successful", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this, Home::class.java))
+                        startActivity(Intent(this, MainActivity::class.java))
                     } else {
                         Toast.makeText(this, "Signup Failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                     }

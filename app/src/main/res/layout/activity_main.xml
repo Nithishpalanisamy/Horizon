@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".30" />
+        app:layout_constraintGuide_end="512dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/back1"
