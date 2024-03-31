@@ -2,49 +2,62 @@ package com.example.horizon
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.util.Patterns
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 open class MainActivity : AppCompatActivity() {
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val email = findViewById<EditText>(R.id.email)
+        val auth = FirebaseAuth.getInstance()
+        val loginemail = findViewById<EditText>(R.id.email)
         val password = findViewById<EditText>(R.id.password)
         val loginButton = findViewById<Button>(R.id.loginButton)
-        val registerButton =findViewById<Button>(R.id.registerButton)
+        val registerButton = findViewById<Button>(R.id.registerButton)
         val forgetPassword = findViewById<Button>(R.id.forgotPassword)
 
         loginButton.setOnClickListener {
-            if (isValidEmail(email.text.toString()) && isValidPassword(password.text.toString())) {
-                val j = Intent(this, Home::class.java)
-                startActivity(j)
+            val email = loginemail.text.toString()
+            val pass = password.text.toString()
+
+            if (email.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                if (pass.isNotEmpty() && isValidPassword(pass)) {
+                    auth.signInWithEmailAndPassword(email, pass)
+                        .addOnSuccessListener {
+                            Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this, Home::class.java))
+                            finish()
+                        }
+                        .addOnFailureListener { e ->
+                            Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
+                        }
+                } else {
+                    password.error = "Password cannot be empty"
+                }
+            } else if (email.isEmpty()) {
+                loginemail.error = "Email cannot be empty"
             } else {
-                Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show()
+                loginemail.error = "Please enter valid email"
             }
         }
+
         registerButton.setOnClickListener {
-            val k =Intent(this,Register::class.java)
+            val k = Intent(this, Register::class.java)
             startActivity(k)
         }
     }
 
-    private fun isValidEmail(email: String): Boolean {
-        return Patterns.EMAIL_ADDRESS.matcher(email).matches()
-    }
-
-    private fun isValidPassword(password: String): Boolean {
+    open fun isValidPassword(password: String): Boolean {
         // You can replace this with your own password validation logic
         return password.length >= 6
     }
-    open fun back()
-    {
-        finish()
-    }
 }
+
 
