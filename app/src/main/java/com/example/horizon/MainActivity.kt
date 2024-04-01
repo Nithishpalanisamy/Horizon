@@ -7,9 +7,10 @@ import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
-open class MainActivity : Launch() {
+open class MainActivity : AppCompatActivity() {
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +32,7 @@ open class MainActivity : Launch() {
                     auth.signInWithEmailAndPassword(email, pass)
                         .addOnSuccessListener {
                             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(this, Home::class.java))
+                            startActivity(Intent(this, Launch::class.java))
                             finish()
                         }
                         .addOnFailureListener { e ->

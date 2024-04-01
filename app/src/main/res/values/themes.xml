@@ -6,6 +6,7 @@
     </style>
 
     <style name="Theme.Horizon" parent="Base.Theme.Horizon" />
+
     <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/light_blue</item>
     </style>
