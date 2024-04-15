@@ -1,17 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/fragment_home"
     android:layout_height="match_parent"
     tools:context=".FragmentHome">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home page"
-        android:textSize="30sp"
-        android:textColor="@color/yellow"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0"
+                android:text="@string/let_s_find_your_ngreat_job"
+                android:textColor="@color/light_blue"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="270dp"
+                android:layout_below="@+id/textView4"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="25dp"
+                android:contentDescription="@string/todo"
+                android:scaleType="fitXY"
+                android:src="@drawable/seeker02"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/app_theme"
+                android:text="@string/find_jobs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="29dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_view"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15sp"
+                    android:background="#0022D6EE"
+                    android:fontFamily="@font/sansita"
+                    android:gravity="center"
+                    android:padding="15sp"
+                    android:text="1"
+                    android:textColor="@color/app_theme"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/fjob"
+                    android:layout_width="173dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="Find jobs"
+                    android:fontFamily="@font/berkshire"
+                    android:textColor="@color/navy_blue"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="29sp">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_view"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15sp"
+                    android:background="#0022D6EE"
+                    android:fontFamily="@font/sansita"
+                    android:gravity="center"
+                    android:padding="15sp"
+                    android:text="2"
+                    android:textColor="@color/app_theme"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/updateprof"
+                    android:layout_width="173dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:fontFamily="@font/berkshire"
+                    android:gravity="center"
+                    android:padding="05sp"
+                    android:text="Update Profile"
+                    android:textAlignment="center"
+                    android:textColor="@color/navy_blue"
+                    android:textSize="25sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="29dp">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_view"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15sp"
+                    android:background="#0022D6EE"
+                    android:fontFamily="@font/sansita"
+                    android:gravity="center"
+                    android:padding="15sp"
+                    android:text="3"
+                    android:textColor="@color/app_theme"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/traceapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:padding="3sp"
+                    android:text="Trace Application"
+                    android:textColor="@color/navy_blue"
+                    android:fontFamily="@font/berkshire"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="29sp">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_view"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15sp"
+                    android:background="#0022D6EE"
+                    android:fontFamily="@font/sansita"
+                    android:gravity="center"
+                    android:padding="15sp"
+                    android:text="4"
+                    android:textColor="@color/app_theme"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/Applyjob"
+                    android:layout_width="173dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:padding="3sp"
+                    android:text="Apply jobs"
+                    android:textColor="@color/navy_blue"
+                    android:fontFamily="@font/berkshire"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

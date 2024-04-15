@@ -5,24 +5,19 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
-    <com.google.android.material.tabs.TabLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tabLayout">
+        android:text="HORIZON"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
 
-        <com.google.android.material.tabs.TabItem
-            android:text="Home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <com.google.android.material.tabs.TabItem
-            android:text="Search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <com.google.android.material.tabs.TabItem
-            android:text="Profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.tabs.TabLayout>
+        android:background="@color/app_theme"/>
+
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"
