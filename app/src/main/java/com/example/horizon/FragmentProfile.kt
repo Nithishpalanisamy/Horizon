@@ -22,6 +22,7 @@ class FragmentProfile : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val name : TextView? = view.findViewById(R.id.name)
+        val age : TextView? = view.findViewById(R.id.age)
         val mobile : TextView?= view.findViewById(R.id.mobile)
         val email :TextView?=view.findViewById(R.id.email)
         val gender : TextView?=view.findViewById(R.id.gender)
@@ -29,6 +30,7 @@ class FragmentProfile : Fragment() {
         val experience : TextView?=view.findViewById(R.id.experience)
         val qualification : TextView?=view.findViewById(R.id.qualification)
         val skill : TextView? =view.findViewById(R.id.skills)
+        val resume :TextView?=view.findViewById(R.id.Resume)
         val args = this.arguments
         val inputname = args?.get("name")
         val inputmobile =args?.get("mobile")
@@ -38,8 +40,11 @@ class FragmentProfile : Fragment() {
         val inputexperience=args?.get("experience")
         val inputqualification=args?.get("qualification")
         val inputskill=args?.get("skills")
+        val inputage = args?.get("age")
+        val inputresume = args?.get("resume")
 
         name?.text = inputname?.toString() ?: ""
+        age?.text = inputage?.toString() ?:""
         mobile?.text = inputmobile?.toString() ?: ""
         email?.text = inputemail?.toString() ?: ""
         gender?.text = inputgender?.toString() ?: ""
@@ -47,6 +52,8 @@ class FragmentProfile : Fragment() {
         experience?.text = inputexperience?.toString() ?: ""
         qualification?.text = inputqualification?.toString() ?: ""
         skill?.text = inputskill?.toString() ?: ""
+        resume?.text = inputresume?.toString()?:""
+
 
 
         // Assuming you have a button in your layout with id 'buttonId'

@@ -17,7 +17,7 @@ open class Launch: MainActivity() {
             startActivity(Intent(this, Home::class.java))
         }
         employee.setOnClickListener {
-            startActivity(Intent(this,Home::class.java))
+            startActivity(Intent(this,Hirehome::class.java))
         }
     }
 }

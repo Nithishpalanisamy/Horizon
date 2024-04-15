@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:id="@+id/fragment_home"
     android:layout_height="match_parent"
+    android:background="@drawable/launch"
     tools:context=".FragmentProfile">
 
 
@@ -34,6 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20sp"
                     android:backgroundTint="@color/app_theme"
                     android:text="Edit"
                     android:layout_gravity="end"/>
@@ -66,11 +68,14 @@
                                             android:layout_height="wrap_content"
                                             android:orientation="horizontal">
                                                 <TextView
-                                                    android:layout_width="wrap_content"
+                                                    android:layout_width="120dp"
                                                     android:layout_height="wrap_content"
                                                     android:text="Name"
                                                     android:textSize="18sp"
-                                                    android:padding="5dp"/>
+                                                    android:padding="5dp"
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold"
+                                                    android:background="@color/light_blue"/>
 
                                                 <TextView
                                                     android:id="@+id/name"
@@ -79,6 +84,36 @@
                                                     android:textSize="18sp"
                                                     android:gravity="center"
                                                     android:padding="5dp"/>
+                                        </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20sp"
+                                    android:padding="16dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+                                                <TextView
+                                                    android:layout_width="120dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Age"
+                                                    android:textSize="18sp"
+                                                    android:padding="5dp"
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold"
+                                                    android:background="@color/light_blue"/>
+
+                                                <TextView
+                                                    android:id="@+id/age"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:textSize="18sp"
+                                                    android:padding="5dp"
+                                                    android:gravity="center"
+                                                    />
                                         </LinearLayout>
                                 </androidx.cardview.widget.CardView>
 
@@ -93,11 +128,14 @@
                                             android:layout_height="wrap_content"
                                             android:orientation="horizontal">
                                                 <TextView
-                                                    android:layout_width="wrap_content"
+                                                    android:layout_width="120dp"
                                                     android:layout_height="wrap_content"
                                                     android:text="Mobile"
                                                     android:textSize="18sp"
-                                                    android:padding="5dp"/>
+                                                    android:padding="5dp"
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold"
+                                                    android:background="@color/light_blue"/>
 
                                                 <TextView
                                                     android:id="@+id/mobile"
@@ -120,11 +158,14 @@
                                             android:layout_height="wrap_content"
                                             android:orientation="horizontal">
                                                 <TextView
-                                                    android:layout_width="wrap_content"
+                                                    android:layout_width="120dp"
                                                     android:layout_height="wrap_content"
                                                     android:text="Email"
                                                     android:textSize="18sp"
-                                                    android:padding="5dp"/>
+                                                    android:padding="5dp"
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold"
+                                                    android:background="@color/light_blue"/>
 
                                                 <TextView
                                                     android:id="@+id/email"
@@ -148,11 +189,14 @@
                                             android:orientation="horizontal">
 
                                                 <TextView
-                                                    android:layout_width="wrap_content"
+                                                    android:layout_width="120dp"
                                                     android:layout_height="wrap_content"
                                                     android:text="Gender"
                                                     android:textSize="18sp"
-                                                    android:padding="5dp"/>
+                                                    android:padding="5dp"
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold"
+                                                    android:background="@color/light_blue"/>
                                                 <TextView
                                                     android:id="@+id/gender"
                                                     android:layout_width="match_parent"
@@ -175,11 +219,14 @@
                                             android:layout_height="wrap_content"
                                             android:orientation="horizontal">
                                                 <TextView
-                                                    android:layout_width="wrap_content"
+                                                    android:layout_width="120dp"
                                                     android:layout_height="wrap_content"
                                                     android:text="Location"
                                                     android:textSize="18sp"
-                                                    android:padding="5dp"/>
+                                                    android:padding="5dp"
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold"
+                                                    android:background="@color/light_blue"/>
 
                                                 <TextView
                                                     android:id="@+id/location"
@@ -192,15 +239,15 @@
                                 </androidx.cardview.widget.CardView>
                         </LinearLayout>
                 </androidx.cardview.widget.CardView>
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginBottom="20sp"-->
-<!--            android:padding="16dp">-->
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                        android:orientation="vertical">-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:padding="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                        android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -220,11 +267,14 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                                 <TextView
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="120dp"
                                     android:layout_height="wrap_content"
                                     android:text="Experience"
                                     android:textSize="18sp"
-                                    android:padding="5dp"/>
+                                    android:padding="5dp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:background="@color/light_blue"/>
 
                                 <TextView
                                     android:id="@+id/experience"
@@ -247,11 +297,14 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                                 <TextView
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="120dp"
                                     android:layout_height="wrap_content"
                                     android:text="Qualification"
                                     android:textSize="18sp"
-                                    android:padding="5dp"/>
+                                    android:padding="5dp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:background="@color/light_blue"/>
 
                                 <TextView
                                     android:id="@+id/qualification"
@@ -274,11 +327,14 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
                                 <TextView
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="120dp"
                                     android:layout_height="wrap_content"
                                     android:text="Skills"
                                     android:textSize="18sp"
-                                    android:padding="5dp"/>
+                                    android:padding="5dp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:background="@color/light_blue"/>
 
                                 <TextView
                                     android:id="@+id/skills"
@@ -286,22 +342,29 @@
                                     android:layout_height="wrap_content"
                                     android:inputType="textMultiLine"
                                     android:lines="3"
+                                    android:gravity="end"
                                     android:maxLines="8"
                                     android:scrollbars="vertical"
                                     tools:ignore="SpeakableTextPresentCheck" />
                         </LinearLayout>
                 </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="120dp"
                                     android:layout_height="wrap_content"
                                     android:text="Resume"
                                     android:textSize="18sp"
-                                    android:padding="5dp"/>
+                                    android:padding="5dp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:background="@color/light_blue"/>
 
                                 <TextView
                                     android:id="@+id/Resume"
@@ -311,6 +374,9 @@
                                     android:padding="5dp" />
 
                         </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 

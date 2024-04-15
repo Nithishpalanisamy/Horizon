@@ -2,9 +2,12 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/fragment_home"
     android:layout_height="match_parent"
-    tools:context=".FragmentProfile">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Edit_company_profile">
+
+    <!-- TODO: Update blank fragment layout -->
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,11 +26,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Profile"
+                    android:text="@string/profile"
                     android:gravity="center"
                     android:textSize="30sp"
                     android:textColor="@color/light_blue"
                     android:layout_marginBottom="25dp"/>
+                
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -38,22 +42,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name"
-                            android:textSize="18sp"
-                            android:padding="5dp"/>
-
                         <EditText
-                            android:id="@+id/name"
+                            android:id="@+id/companyname"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                            android:hint="@string/company_name"
                             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -64,20 +62,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Age"
-                            android:textSize="18sp"
-                            android:padding="5dp"/>
+
 
                         <EditText
-                            android:id="@+id/age"
+                            android:id="@+id/description"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:minHeight="48dp"
-                            android:inputType="text"
-                            android:digits="0123456789"
+                            android:inputType="textMultiLine"
+                            android:hint="Profile description"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -92,20 +85,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Mobile"
-                            android:textSize="18sp"
-                            android:padding="5dp"/>
+
 
                         <EditText
-                            android:id="@+id/mobile"
+                            android:id="@+id/stream"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:minHeight="48dp"
+                            android:hint="Stream"
                             android:inputType="text"
-                            android:digits="0123456789"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -119,15 +107,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Email"
-                            android:textSize="18sp"
-                            android:padding="5dp"/>
-
                         <EditText
-                            android:id="@+id/email"
+                            android:id="@+id/companylocation"
+                            android:hint="Location"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -147,35 +129,24 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Gender"
+                            android:text="Contact"
                             android:textSize="18sp"
                             android:padding="5dp"/>
 
-                        <RadioGroup
-                            android:id="@+id/gender"
+                        <EditText
+                            android:id="@+id/companyemail"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
+                            android:hint="Email"
+                            android:minHeight="48dp" />
 
-                            <RadioButton
-                                android:id="@+id/male"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Male" />
+                        <EditText
+                            android:id="@+id/companymobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="mobile"
+                            android:minHeight="48dp" />
 
-                            <RadioButton
-                                android:id="@+id/female"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Female" />
-
-                            <RadioButton
-                                android:id="@+id/others"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Others" />
-                        </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -190,25 +161,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Location"
-                            android:textSize="18sp"
-                            android:padding="5dp"/>
-
                         <EditText
-                            android:id="@+id/location"
+                            android:id="@+id/website"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:inputType="text"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                            android:hint="Website link"
                             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -219,118 +182,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Experience"
-                    android:textSize="18sp"
-                    android:padding="5dp"/>
-
                 <EditText
                     android:id="@+id/experience"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:inputType="text"
+                    android:hint="Company Size"
+                    android:inputType="textMultiLine"
                     android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:padding="16dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Highest Qualification"
-                    android:textSize="18sp"
-                    android:padding="5dp"/>
 
-                <EditText
-                    android:id="@+id/qualification"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:inputType="text"
-                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz. "
-                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:padding="16dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Enter Skills"
-                    android:textSize="18sp"
-                    android:padding="5dp"/>
-
-                <EditText
-                    android:id="@+id/skills"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textMultiLine"
-                    android:lines="3"
-                    android:maxLines="8"
-                    android:scrollbars="vertical"
-                    tools:ignore="SpeakableTextPresentCheck" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:padding="16dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Resume"
-                    android:textSize="18sp"
-                    android:padding="5dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:padding="5dp"
-                    android:id="@+id/resum"/>
-                </LinearLayout>
-
-            <Button
-                android:id="@+id/upload"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Upload"
-                android:layout_gravity="end"
-                android:layout_marginRight="10dp"
-                android:backgroundTint="@color/app_theme"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -347,7 +211,11 @@
                 android:layout_marginRight="10dp"
                 android:backgroundTint="@color/app_theme"/>
         </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+
+
 
 </ScrollView>

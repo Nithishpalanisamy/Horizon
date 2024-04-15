@@ -21,7 +21,7 @@
         android:visibility="visible" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
+        android:id="@+id/bottomNavigation01"
         android:layout_width="match_parent"
         android:layout_height="75sp"
         android:background="@color/app_theme"
@@ -29,6 +29,6 @@
         app:itemIconSize="30dp"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
-        app:menu="@menu/bottom_nav" />
+        app:menu="@menu/hire_menu_bottom_navbar" />
 
 </LinearLayout>

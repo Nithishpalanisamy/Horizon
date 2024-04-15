@@ -3,20 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/horizon03"
+        android:icon="@drawable/horizon_logo_2"
         android:label="Horizon"
-        android:roundIcon="@mipmap/horizon03"
+        android:roundIcon="@drawable/horizon_logo_2"
         android:supportsRtl="true"
         android:theme="@style/Theme.Horizon"
         tools:targetApi="31">
-        <activity
-            android:name=".HireHome"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="false"
@@ -30,6 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Hirehome"/>
         <activity
             android:name=".Launch"
             android:exported="false" />
